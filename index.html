@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations with GoRest API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CRUD Operations with GoRest API</h1>
+    
+    <div>
+        <button onclick="getData()">Get All Users</button>
+    </div>
+
+    <h2>Add User</h2>
+    <form id="addUserForm">
+        <input type="text" id="addName" placeholder="Enter Name" required>
+        <input type="email" id="addEmail" placeholder="Enter Email" required>
+        <select id="addGender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <select id="addStatus" required>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+        </select>
+        <button type="submit">Add User</button>
+    </form>
+
+    <h2>Edit User</h2>
+    <form id="editForm">
+        <input type="number" id="editUserId" placeholder="Enter User ID" required>
+        <input type="text" id="editName" placeholder="Enter Name" required>
+        <input type="email" id="editEmail" placeholder="Enter Email" required>
+        <button type="submit">Update User</button>
+    </form>
+    
+    <h2>Delete User</h2>
+    <input type="number" id="deleteUserId" placeholder="Enter User ID to Delete">
+    <button onclick="deleteUser()">Delete User</button>
+
+    <div id="output"></div> 
+
+    <script src="script.js"></script>
+</body>
+</html>
